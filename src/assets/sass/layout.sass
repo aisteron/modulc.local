@@ -101,3 +101,41 @@ body.index-page
 					transition: background 0.3s ease
 					&:hover
 						background: linear-gradient(180deg, rgba(23, 117, 209, 0.44) 0%, rgba(4, 34, 64, 0.44) 100%)
+	section.categories
+		height: 100vh
+		display: flex
+		align-items: center
+		justify-content: center
+		.cnt
+			width: 844px
+			margin: 0 auto
+			ul
+				display: flex
+				gap: 1rem
+				flex-wrap: wrap
+
+				li
+					width: 270px
+					height: 125px
+					padding: 1.5rem
+					background: linear-gradient(180deg, rgba(0, 38, 75, 0.44) 0%, rgba(0, 0, 0, 0.44) 100%)
+					position: relative
+					line-height: 150%
+					font-weight: 500
+					font-size: 18px
+					&:hover
+						backdrop-filter: blur(4px)
+						background: linear-gradient(180deg, rgba(23, 117, 209, 0.64) 0%, rgba(4, 34, 64, 0.64) 100%)
+					a
+						color: $light_blue
+						text-decoration: none
+						display: block
+						&:after
+							content: ''
+							inset: 0
+							position: absolute
+					&.all
+						img
+							position: absolute
+							right: 24px
+							top: calc(50% - 24px)
