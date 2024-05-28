@@ -64,7 +64,7 @@ img, picture,svg
 .blue
 	color: $blue
 
-$desktop: 1400px
+$desktop: 1030px
 $notebook: 100%
 
 @mixin mw()
@@ -110,3 +110,23 @@ $notebook: 100%
 
 		&:nth-child(3)
 			top: 12px
+
+nav.bread
+	ol
+		list-style: none
+		display: flex
+		gap: 1rem
+		color: $light_blue
+		padding: 0
+		li
+			&:last-of-type
+				color: #90A8BF
+			&:not(:last-child)
+				&:after
+					content: '/'
+					margin-left: 1rem
+		a
+			color: $light_blue
+			text-decoration: none
+			&:hover
+				text-decoration: underline
