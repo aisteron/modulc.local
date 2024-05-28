@@ -48,6 +48,35 @@ header
 			&:hover
 				.head button
 					background-color: #b2cde266
+footer
+	@include pw
+	background: rgba(1, 27, 51, 0.94)
+	color: $light_blue
+	.row
+		padding-top: 2rem
+	a
+		color: $light_blue
+		text-decoration: none
+		&:hover
+			text-decoration: underline
+	.items
+		display: flex
+		gap: 2rem
+		padding: 2rem
+		padding-top: 1rem
+		padding-left: 4rem
+		padding-bottom: 5rem
+		font-size: 15px
+		font-weight: 400
+		.item
+			ul
+				li
+					line-height: 150%
+					&.rek
+						display: flex
+						align-items: center
+						gap: 10px
+			
 body.index-page
 	.wrapper
 		//transition: 1s cubic-bezier(0.5, 0, 0.5, 1)
@@ -68,6 +97,10 @@ body.index-page
 			color: $light_blue
 			padding: 50px 36px
 			padding-bottom: 1rem
+			img.scroll
+				cursor: pointer
+				&:hover
+					opacity: 0.8
 			.txt
 				margin-left: 180px
 				font-size: 18px
