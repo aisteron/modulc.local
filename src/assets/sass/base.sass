@@ -5,7 +5,8 @@ $blue: #007EE8
 	font-family: 'Bicubik'
 	font-style: normal
 	font-weight: 400
-	src: local('Bicubik'), local('Bicubik-Regular'), url('/assets/fonts/bicubik-regular.woff2') format('woff2')
+	//src: local('Bicubik'), local('Bicubik-Regular'), url('/assets/fonts/bicubik-regular.woff2') format('woff2')
+	src: local('Bicubik'), local('Bicubik-Regular'), url('/assets/fonts/Bicubik.woff2') format('woff2')
 	font-display: block
 
 @font-face
@@ -77,23 +78,27 @@ $notebook: 100%
 	@media(min-width: 1900px)
 		padding: 0 calc(50% - $desktop/2)
 	@media(max-width: 1899px)
-		padding: 1rem
+		padding: 0 calc(50% - $desktop/2)
+	@media(max-width: 1090px)
+		padding: 0 1rem
 #nav-icon1
 	width: 20px
+	min-width: 20px
 	height: 15px
 	position: relative
 	transform: rotate(0deg)
 	transition: .5s ease-in-out
 	cursor: pointer
 	display: none
-	@media(max-width: 930px)
-		display: block
+	@media(max-width: 780px)
+		display: block !important
+		margin-top: 4px	
 	span
 		display: block
 		position: absolute
 		height: 2px
 		width: 100%
-		background: #000
+		background: $light_blue
 		border-radius: 50px
 		opacity: 1
 		left: 0
@@ -110,14 +115,29 @@ $notebook: 100%
 
 		&:nth-child(3)
 			top: 12px
+	&.open span
+		&:nth-child(1)
+			top: 6px
+			transform: rotate(135deg)
 
+		&:nth-child(2)
+			opacity: 0
+			left: -60px
+
+		&:nth-child(3)
+			top: 6px
+			transform: rotate(-135deg)
 nav.bread
+	margin-top: 2rem
 	ol
 		list-style: none
 		display: flex
 		gap: 1rem
 		color: $light_blue
 		padding: 0
+		margin: 0
+		flex-wrap: wrap
+		row-gap: 10px
 		li
 			&:last-of-type
 				color: #90A8BF
