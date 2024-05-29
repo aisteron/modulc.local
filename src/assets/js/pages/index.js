@@ -2,10 +2,11 @@ import { qs } from "../libs"
 
 export function Pages(){
 	
-	//fp()
+	//scroll()
+	background_images()
 }
 
-function fp(){
+function scroll(){
 	
 	var divs = $('section');
   var div = 0;
@@ -33,5 +34,9 @@ function fp(){
   $(window).resize(function() {
     $('html,body').scrollTop(divs.eq(div).offset().top);
   });
+}
+
+function background_images(){
+	
 }
 
