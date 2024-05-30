@@ -15,14 +15,14 @@ const devWebpackConfig = merge(baseWebpackConfig, {
       errors: true
     },
 		setup(app){
-      var bodyParser = require('body-parser');    
+      var bodyParser = require('body-parser');
       app.use(bodyParser.urlencoded({extended : true}));
       app.use(bodyParser.json());
       
       app.post('/api', (req, res) => {
 
-					if(req.body.action == 'callback'){
-						const data = fs.readFileSync('./src/static/api/zayavka.json', 'utf8')
+					if(req.body.action == 'get_bg_config'){
+						const data = fs.readFileSync('./src/static/api/get_bg_config.json', 'utf8')
 						res.send(data)
 					}	
       });

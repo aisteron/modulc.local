@@ -1,4 +1,8 @@
-section.first(style="background-image: url(/assets/img/pages/index/bg1.webp)")
+//-section.first(style="background-image: url(/assets/img/pages/index/bg1.webp)")
+section.first
+	img.bg(
+		srcset="/assets/img/pages/index/bg1m.webp 480w"
+		src="/assets/img/pages/index/bg1.webp")
 	.cnt
 		img.logo(src="/assets/img/logo_large.svg" loading="lazy" width="609" height="130")
 		.txt

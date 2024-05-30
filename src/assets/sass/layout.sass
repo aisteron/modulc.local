@@ -281,13 +281,21 @@ body.index-page
 				font-size: 1.5rem
 	section.first
 		height: calc(100vh - 54px )
-		height: 100vh
+		//height: 100vh
 		padding-top: 150px
+		img.bg
+			position: absolute
+			left: 0
+			top: 0
+			width: 100%
+			height: calc(100vh + 54px )
 		@media(max-width:750px)
 			padding-top: 0
 			height: auto
 			.cnt img.scroll
 				display: none
+			img.bg
+				height: auto	
 		.cnt
 			backdrop-filter: blur(4px)
 			background: linear-gradient(180deg, rgba(0, 38, 75, 0.34) 0%, rgba(0, 0, 0, 0.34) 100%)

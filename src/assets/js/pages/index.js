@@ -1,4 +1,4 @@
-import { qs } from "../libs"
+import { qs, xml } from "../libs"
 
 export function Pages(){
 	
@@ -36,7 +36,11 @@ function scroll(){
   });
 }
 
-function background_images(){
-	
+async function background_images(){
+	const cfg = await load_bg_config()
+}
+
+async function load_bg_config(){
+	return await xml("get_bg_config",null,'/api')
 }
 
