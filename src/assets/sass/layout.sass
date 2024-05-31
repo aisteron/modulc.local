@@ -7,6 +7,8 @@ header
 	justify-content: space-between
 	@media(max-width: 780px)
 		height: 54px
+		a.logo img
+			width: 300px !important
 	ul.nav
 		display: flex
 		align-items: center
@@ -264,12 +266,11 @@ footer
 		position: fixed
 		right: 10px
 		bottom: 10px
+		z-index: 2
 		img
 			&:hover
 				opacity: 0.8
 body.index-page
-	.wrapper
-		//transition: 1s cubic-bezier(0.5, 0, 0.5, 1)
 	section
 		@media(max-width: 720px)
 			height: auto !important
@@ -328,9 +329,13 @@ body.index-page
 		align-items: center
 		justify-content: center
 		background-color: #3d5d8b
+		position: relative
+		overflow: hidden
 		.cnt
 			width: 844px
 			margin: 0 auto
+			position: relative
+			z-index: 1
 			@media(max-width: 900px)
 				width: 100%
 				margin: 1rem
@@ -362,9 +367,13 @@ body.index-page
 		align-items: center
 		justify-content: center
 		background-color: #033f79f7
+		overflow: hidden
+		position: relative
 		.cnt
 			width: 844px
 			margin: 0 auto
+			position: relative
+			z-index: 1
 			@media(max-width:900px)
 				width: 100%
 				margin: 1rem
@@ -588,6 +597,9 @@ body.category-page
 						align-self: flex-start
 					&:hover
 						background-color: darken(#007EE8, 5%)
+					&[disabled]
+						background-color: #333
+						cursor: not-allowed	
 				textarea
 					background-color: #344D66
 					width: 100%
@@ -600,6 +612,11 @@ body.category-page
 					font-weight: 500
 					padding: 1rem
 					border: none
+					transition: background-color 0.3s ease
+					&::placeholder
+						font-family: inherit
+						color: #B4C7D7
+						font-size: 15px
 					@media(max-width: 480px)
 						height: 120px
 					&:focus

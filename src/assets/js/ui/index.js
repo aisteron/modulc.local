@@ -1,7 +1,8 @@
-import { qs } from "../libs"
+import { load_toast, qs, qsa, xml } from "../libs"
 
 export function Ui(){
 	mobile_menu()
+	cb_form()
 
 }
 
@@ -45,4 +46,59 @@ function mobile_menu(){
 		const str = `<li><a href="/">Главная</a></li>`
 		navs.forEach(n=>n?.insertAdjacentHTML('afterbegin', str))
 	}
+}
+
+async function cb_form(){
+	const form = qs('form.cb')
+	if(!form) return
+	
+	form.listen("submit", async e => {
+		e.preventDefault()
+
+		const how = Array.from(qsa('.how input:checked'))
+								.map(el => qs('.l',el.closest('label')).innerHTML.replace('\t','') ) 
+		
+		const obj = {
+			name: qs('[name="name"]', e.target).value,
+			phone: qs('[name="phone"]', e.target).value,
+			how: how
+		}
+
+		if(qs('textarea', e.target).value){
+			obj.message = qs('textarea', e.target).value
+		}
+
+		qs('button[type="submit"]').disabled = true
+
+		let res = await xml('callback', obj, '/api')
+		qs('button[type="submit"]').disabled = false
+		
+		try{
+			res = JSON.parse(res)
+		} catch(e){
+			await load_toast()
+			new Snackbar('Ошибка парсинга JSON')
+		}
+
+		if(!res.success){
+			await load_toast()
+			new Snackbar('Ошибка отправки заявки')
+			return
+		}
+
+		await load_toast()
+		new Snackbar('✅ Успешно отправлено')
+
+		qs('[name="name"]', e.target).value = ''
+		qs('[name="phone"]', e.target).value = ''
+		qs('textarea', e.target).value = ''
+
+		qsa('.how input').forEach(el => el.checked = false)
+
+
+
+
+		
+		
+	})
 }

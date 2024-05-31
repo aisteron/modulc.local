@@ -1,12 +1,23 @@
-import { qs, xml } from "../libs"
+import { preloadImages, qs, qsa, xml } from "../libs"
 
 export function Pages(){
+
+
+
+	if(qs('.index-page')){
+		window.innerWidth >= 720
+		&& ( scroll(), background_images() )
+	}
 	
-	//scroll()
-	background_images()
+
+	
 }
 
-function scroll(){
+async function scroll(){
+
+
+	await load_jquery()	
+
 	
 	var divs = $('section');
   var div = 0;
@@ -37,10 +48,39 @@ function scroll(){
 }
 
 async function background_images(){
-	const cfg = await load_bg_config()
+	let cfg = await xml("get_bg_config",null,'/api')
+	cfg = JSON.parse(cfg)
+	preloadImages(cfg.map(c=>window.location.href+c.src))
+
+	qsa('li[resid]').forEach(li => {
+		li.listen('mouseover', e => {
+
+			let resid = +e.target.closest('li').getAttribute('resid')		
+			let obj = cfg.find(c => c.resid == resid)
+
+			let bgs = qs('.bgs',e.target.closest('section'))
+
+			bgs.classList.add('changing')
+			bgs.style.backgroundImage = "url("+obj.src+")"
+			//bgs.classList.remove('changing')
+			
+		})
+	})
 }
 
-async function load_bg_config(){
-	return await xml("get_bg_config",null,'/api')
+async function load_jquery(){
+	return new Promise(resolve => {
+
+		if(qs('[jquery]')){resolve(); return}
+
+		let script = document.createElement('script')
+		script.src = '/vendors/jquery.min.js'
+		script.setAttribute('jquery','')
+		qs('.scripts-area').appendChild(script)
+		script.onload = () => resolve()
+	})
+	
 }
+
+
 

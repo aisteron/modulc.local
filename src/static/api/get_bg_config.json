@@ -1,40 +1,88 @@
-{
-	"first": {
-		"desktop": "/assets/img/pages/index/bg1.webp",
-		"mobile": "/assets/img/pages/index/bg1m.webp"
+[
+	{
+		"resid": 1,
+		"src": "/assets/img/pages/index/area/gorn.webp",
+		"section": "area"
+	},
+	{
+		"resid": 2,
+		"src": "/assets/img/pages/index/area/derev.webp",
+		"section": "area"
+	},
+	{
+		"resid": 3,
+		"src": "/assets/img/pages/index/area/komm.webp",
+		"section": "area"
+	},
+	{
+		"resid": 4,
+		"src": "/assets/img/pages/index/area/arga.webp",
+		"section": "area"
+	},
+	{
+		"resid": 5,
+		"src": "/assets/img/pages/index/area/him.webp",
+		"section": "area"
+	},
+	{
+		"resid": 6,
+		"src": "/assets/img/pages/index/area/blok.webp",
+		"section": "area"
 	},
 
-	"area": {
-		"desktop": "/assets/img/pages/index/bg2.webp",
-		"extra": [
-			{
-				"resid": 1,
-				"src": "/assets/img/pages/index/area/gorn.webp"
-			},
-			{
-				"resid": 2,
-				"src": "/assets/img/pages/index/area/derev.webp"
-			},
-			{
-				"resid": 3,
-				"src": "/assets/img/pages/index/area/komm.webp"
-			},
-			{
-				"resid": 4,
-				"src": "/assets/img/pages/index/area/arga.webp"
-			},
-			{
-				"resid": 5,
-				"src": "/assets/img/pages/index/area/him.webp"
-			},
-			{
-				"resid": 6,
-				"src": "/assets/img/pages/index/area/blok.webp"
-			}
-		]
+	{
+		"resid": 7,
+		"src": "/assets/img/pages/index/categories/01.avif",
+		"section": "categories"
 	},
-
-	"categories": {
-		"desktop": "/assets/img/pages/index/bg3.webp"	
+	{
+		"resid": 8,
+		"src": "/assets/img/pages/index/categories/02.avif",
+		"section": "categories"
+	},
+	{
+		"resid": 9,
+		"src": "/assets/img/pages/index/categories/03.avif",
+		"section": "categories"
+	},
+	{
+		"resid": 10,
+		"src": "/assets/img/pages/index/categories/04.avif",
+		"section": "categories"
+	},
+	{
+		"resid": 11,
+		"src": "/assets/img/pages/index/categories/05.avif",
+		"section": "categories"
+	},
+	{
+		"resid": 12,
+		"src": "/assets/img/pages/index/categories/06.avif",
+		"section": "categories"
+	},
+	{
+		"resid": 13,
+		"src": "/assets/img/pages/index/categories/07.avif",
+		"section": "categories"
+	},
+	{
+		"resid": 14,
+		"src": "/assets/img/pages/index/categories/08.avif",
+		"section": "categories"
+	},
+	{
+		"resid": 15,
+		"src": "/assets/img/pages/index/categories/09.avif",
+		"section": "categories"
+	},
+	{
+		"resid": 16,
+		"src": "/assets/img/pages/index/categories/010.avif",
+		"section": "categories"
+	},
+	{
+		"resid": 17,
+		"src": "/assets/img/pages/index/categories/011.avif",
+		"section": "categories"
 	}
-}
+]

@@ -10,7 +10,8 @@ section.first.lazyload(data-bgset="/assets/img/pages/index/bg1m.webp [(max-width
 			span.blue Собственное производство, готовые решения и по запросу заказчика
 		img.scroll(src="/assets/img/icons/scroll.svg" width="32" height="45")
 
-section.area.lazyload(data-bgset="/assets/img/pages/index/bg2.webp [(min-width: 1024px)]")
+section.area
+	.bgs.lazyload(data-bgset="/assets/img/pages/index/bg2.webp [(min-width: 1024px)]")
 	.cnt
 		h2 <span class="blue">Области</span><br> применения
 		ul
@@ -21,31 +22,32 @@ section.area.lazyload(data-bgset="/assets/img/pages/index/bg2.webp [(min-width: 
 			li(resid="5") Химическая и пищевая промышленность
 			li(resid="6") Блок-контейнеры
 
-section.categories.lazyload(data-bgset="/assets/img/pages/index/bg3.webp [(min-width: 1024px)]")
+section.categories
+	.bgs.lazyload(data-bgset="/assets/img/pages/index/bg3.webp [(min-width: 1024px)]")
 	.cnt
 		h2 <span class="blue">Категории</span><br> продукции
 		ul
-			li
+			li(resid="7")
 				a(href="/category.html") Ленточные конвейеры
-			li
+			li(resid="8")
 				a(href="/category.html") Шнековые конвейеры и питатели
-			li
+			li(resid="9")
 				a(href="/category.html") Цепные скребковые транспортеры
-			li
+			li(resid="10")
 				a(href="/category.html") Рольганги и транспортные роликовые столы
-			li
+			li(resid="11")
 				a(href="/category.html") Шиберы и перекидные клапаны
-			li
+			li(resid="12")
 				a(href="/category.html") Роликовые и дисковые сепараторы
-			li
+			li(resid="13")
 				a(href="/category.html") Емкости и смесители
-			li
+			li(resid="14")
 				a(href="/category.html") Фильтрационные и дозирующие установки
-			li
+			li(resid="15")
 				a(href="/category.html") Системы хранения и разгрузки
-			li
+			li(resid="16")
 				a(href="/category.html") Мобильные блок-контейнеры
-			li
+			li(resid="17")
 				a(href="/category.html") Нестандартное оборудование
 			li.all
 				a(href="/category.html") Посмотреть все продукты

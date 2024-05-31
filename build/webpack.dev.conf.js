@@ -25,6 +25,11 @@ const devWebpackConfig = merge(baseWebpackConfig, {
 						const data = fs.readFileSync('./src/static/api/get_bg_config.json', 'utf8')
 						res.send(data)
 					}	
+
+					if(req.body.action == 'callback'){
+						const data = fs.readFileSync('./src/static/api/callback.json', 'utf8')
+						res.send(data)
+					}	
       });
     }
   },
