@@ -101,8 +101,8 @@ header
 				padding-right: 10px
 				@media(max-width: 780px)
 					justify-content: space-between
-				//&:hover
-					//background-color: #063767
+				&.open
+					background-color: #104c87
 
 				button
 					background: transparent
@@ -271,6 +271,10 @@ footer
 			&:hover
 				opacity: 0.8
 body.index-page
+	header
+		z-index: 2
+		position: sticky
+		top: 0
 	section
 		@media(max-width: 720px)
 			height: auto !important

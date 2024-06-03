@@ -8,6 +8,8 @@ export function Pages(){
 		window.innerWidth >= 720
 		&& ( scroll(), background_images() )
 	}
+
+	img_icon_scroll()
 	
 
 	
@@ -84,3 +86,10 @@ async function load_jquery(){
 
 
 
+
+function img_icon_scroll(){
+	let icon = qs('.cnt img.scroll')
+	icon?.listen("click", e => {
+		qs('section.area').scrollIntoView({ behavior: "smooth"})
+	})
+}

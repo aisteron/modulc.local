@@ -95,6 +95,12 @@ async function cb_form(){
 
 		qsa('.how input').forEach(el => el.checked = false)
 
+		try {
+			ym(97465658,'reachGoal','cb')
+		} catch(e){
+			console.log(e)
+		}
+
 
 
 
