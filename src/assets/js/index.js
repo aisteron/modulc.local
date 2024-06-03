@@ -7,6 +7,8 @@ document.readyState !== 'loading' ? init() : document.addEventListener('DOMConte
 function init(){
 	Ui()
 	Pages()
-	runMetrika(97465658)
+	setTimeout(()=>{
+		runMetrika(97465658)
+	},2000)
   
 }
