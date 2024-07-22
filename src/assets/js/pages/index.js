@@ -11,7 +11,11 @@ export function Pages(){
 
 	img_icon_scroll()
 	
-
+	new fullpage('#fullpage', {
+		licenseKey: 'YOUR_KEY_HERE',
+		autoScrolling:true,
+		scrollHorizontally: true
+	});
 	
 }
 

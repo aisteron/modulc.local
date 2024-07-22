@@ -10,7 +10,7 @@ function mobile_menu(){
 
 	let navs = [qs('header ul.nav'), qs('.header ul.nav')];
 
-	qs('#nav-icon1').listen("click", e => {
+	qs('#nav-icon1')?.listen("click", e => {
 		navs.forEach(n=>n?.classList.toggle('open'))
 		e.target.classList.toggle('open')
 	})
@@ -30,12 +30,12 @@ function mobile_menu(){
 		if(prevent) return
 
 		navs.forEach(n=>n?.classList.remove('open'))
-		qs('#nav-icon1').classList.remove('open')
+		qs('#nav-icon1')?.classList.remove('open')
 		
 	})
 
 	// accordeon 
-	qs('ul.nav li.prod .head').listen("click", e => {
+	qs('ul.nav li.prod .head')?.listen("click", e => {
 		qs('ul.nav li.prod .body').classList.toggle('open')
 		e.target.classList.toggle('open')
 	})
