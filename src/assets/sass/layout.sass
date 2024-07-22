@@ -432,9 +432,36 @@ body.index-page
 				margin: 1rem
 body.index2-page
 	header
-		position: absolute
+		position: sticky
 		top: 0
 		z-index: 2
+	.section
+		&.first
+			.fp-overflow
+				height: 100vh
+			.cnt
+				width: 1033px
+				margin: 0 auto
+				backdrop-filter: blur(4px)
+				top: 25vh
+				position: relative
+				padding: 56px 36px
+				background: linear-gradient(180deg, rgba(0, 38, 75, 0.64) 0%, rgba(0, 0, 0, 0.64) 100%)
+				p
+					color: $light_blue
+					line-height: 150%
+				.txt
+					margin-left: 181px
+					position: relative
+					margin-top: 2rem
+				img.scroll
+					margin: 0 auto
+					margin-top: 2rem
+					display: block
+					cursor: pointer
+					&:hover
+						opacity: 0.9
+
 body.category-page
 	background-color: #022449
 	h1
