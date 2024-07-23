@@ -40,10 +40,7 @@ export async function xml(action, data, path){
   return new Promise(resolve => {
 
 		let xhr = new XMLHttpRequest();
-		let body = `action=${action}${data ? `&data=`+data : ""}`
-
-		process.env.NODE_ENV == 'production' && (cfg.host = '')
-    
+		let body = `action=${action}${data ? `&data=`+data : ""}`  
 
 
 		xhr.open("POST", path, true);
@@ -70,12 +67,8 @@ export const sw = {
 			qs(".scripts-area").appendChild(script)
 			
 			script.onload = () => {
-				
 				let style = loadCSS("/vendors/swiper/swiper-bundle.min.css")
-				onloadCSS(style, () => {
-					//console.log('%c Swiper loaded', 'color: #666')
-					resolve(true)
-				})
+				onloadCSS(style, () => resolve(true))
 			}
 		})
 	},

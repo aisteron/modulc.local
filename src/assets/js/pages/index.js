@@ -24,7 +24,7 @@ async function background_images(){
 
 	let cfg = await xml("get_bg_config",null,'/api')
 	cfg = JSON.parse(cfg)
-	preloadImages(cfg.map(c=>window.location.origin+c.src))
+	preloadImages(cfg.map(c=>window.location.origin+"/"+c.src))
 
 	qsa('li[resid]').forEach(li => {
 		li.listen('mouseover', e => {
