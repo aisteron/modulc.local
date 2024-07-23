@@ -1,59 +1,58 @@
-
-section.first.lazyload(data-bgset="/assets/img/pages/index/bg1m.webp [(max-width: 480px)] | /assets/img/pages/index/bg1.webp")
-	.cnt
-		img.logo(src="/assets/img/logo_large.svg" loading="lazy" width="609" height="130")
-		.txt
-			span.blue От идеи до реализации: надежные партнеры в инжиниринге
-			p Компания <i class="blue">Module Construction</i> cпециализируется на решениях в области обработки, транспортировки, сортировки и фильтрации материалов, используемых в различных сферах промышленности. 
-			p Мы также предлагаем продукцию, изготовленную на заказ в соответствии с конкретными потребностями наших клиентов. 
-			p Мы стремимся быть универсальным поставщиком решений для клиентов из различных отраслей промышленности, стремясь к взаимовыгодному сотрудничеству в проектах.
-			span.blue Собственное производство, готовые решения и по запросу заказчика
-		img.scroll(src="/assets/img/icons/scroll.svg" width="32" height="45")
-
-section.area
-	.bgs.lazyload(data-bgset="/assets/img/pages/index/bg2.webp [(min-width: 1024px)]")
-	.cnt
-		h2 <span class="blue">Области</span><br> применения
-		ul
-			li(resid="1") Горнодобывающая промышленность
-			li(resid="2") Деревообрабатывающая промышленность
-			li(resid="3") Коммунальное хозяйство и благоустройство
-			li(resid="4") Аграрная промышленность
-			li(resid="5") Химическая и пищевая промышленность
-			li(resid="6") Блок-контейнеры
-
-section.categories
-	.bgs.lazyload(data-bgset="/assets/img/pages/index/bg3.webp [(min-width: 1024px)]")
-	.cnt
-		h2 <span class="blue">Категории</span><br> продукции
-		ul
-			li(resid="7")
-				a(href="/category.html") Ленточные конвейеры
-			li(resid="8")
-				a(href="/category.html") Шнековые конвейеры и питатели
-			li(resid="9")
-				a(href="/category.html") Цепные скребковые транспортеры
-			li(resid="10")
-				a(href="/category.html") Рольганги и транспортные роликовые столы
-			li(resid="11")
-				a(href="/category.html") Шиберы и перекидные клапаны
-			li(resid="12")
-				a(href="/category.html") Роликовые и дисковые сепараторы
-			li(resid="13")
-				a(href="/category.html") Емкости и смесители
-			li(resid="14")
-				a(href="/category.html") Фильтрационные и дозирующие установки
-			li(resid="15")
-				a(href="/category.html") Системы хранения и разгрузки
-			li(resid="16")
-				a(href="/category.html") Мобильные блок-контейнеры
-			li(resid="17")
-				a(href="/category.html") Нестандартное оборудование
-			li.all
-				a(href="/category.html") Посмотреть все продукты
-				img.arrow(src="/assets/img/icons/white_arrow.svg" width="24" height="24")
-
-section.contacts
-	.cnt
-		h2 <span class="blue">Контакты</span><br>компании
-		<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d37088.241623489535!2d26.364136849648673!3d54.48031538200021!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46dc43b0c0d9ff15%3A0xaf5b90b7312cc549!2z0KHQvNC-0YDQs9C-0L3RjCwg0JPRgNC-0LTQvdC10L3RgdC60LDRjyDQvtCx0LvQsNGB0YLRjA!5e0!3m2!1sru!2sby!4v1716757401733!5m2!1sru!2sby" width="100%" height="350" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+#fullpage
+	.section.first.lazyload(data-bgset="/assets/img/pages/index/bg1m.webp [(max-width: 480px)] | /assets/img/pages/index/bg1.webp")
+		//include ../../ui/header
+		.cnt
+			img.logo(src="/assets/img/logo_large.svg" loading="lazy" width="609" height="130")
+			.txt
+				span.blue От идеи до реализации: надежные партнеры в инжиниринге
+				p Компания <i class="blue">Module Construction</i> cпециализируется на решениях в области обработки, транспортировки, сортировки и фильтрации материалов, используемых в различных сферах промышленности. 
+				p Мы также предлагаем продукцию, изготовленную на заказ в соответствии с конкретными потребностями наших клиентов. 
+				p Мы стремимся быть универсальным поставщиком решений для клиентов из различных отраслей промышленности, стремясь к взаимовыгодному сотрудничеству в проектах.
+				span.blue Собственное производство, готовые решения и по запросу заказчика
+			img.scroll(src="/assets/img/icons/scroll.svg" width="32" height="45")
+	.section.area
+		.bgs2.lazyload(data-bgset="/assets/img/pages/index/bg2.webp [(min-width: 1024px)]")
+		.cnt
+			h2 <span class="blue">Области</span><br> применения
+			ul
+				li(resid="1") Горнодобывающая промышленность
+				li(resid="2") Деревообрабатывающая промышленность
+				li(resid="3") Коммунальное хозяйство и благоустройство
+				li(resid="4") Аграрная промышленность
+				li(resid="5") Химическая и пищевая промышленность
+				li(resid="6") Блок-контейнеры
+	.section.categories
+		.bgs2.lazyload(data-bgset="/assets/img/pages/index/bg3.webp [(min-width: 1024px)]")
+		.cnt
+			h2 <span class="blue">Категории</span><br> продукции
+			ul
+				li(resid="7")
+					a(href="/category.html") Ленточные конвейеры
+				li(resid="8")
+					a(href="/category.html") Шнековые конвейеры и питатели
+				li(resid="9")
+					a(href="/category.html") Цепные скребковые транспортеры
+				li(resid="10")
+					a(href="/category.html") Рольганги и транспортные роликовые столы
+				li(resid="11")
+					a(href="/category.html") Шиберы и перекидные клапаны
+				li(resid="12")
+					a(href="/category.html") Роликовые и дисковые сепараторы
+				li(resid="13")
+					a(href="/category.html") Емкости и смесители
+				li(resid="14")
+					a(href="/category.html") Фильтрационные и дозирующие установки
+				li(resid="15")
+					a(href="/category.html") Системы хранения и разгрузки
+				li(resid="16")
+					a(href="/category.html") Мобильные блок-контейнеры
+				li(resid="17")
+					a(href="/category.html") Нестандартное оборудование
+				li.all
+					a(href="/category.html") Посмотреть все продукты
+					img.arrow(src="/assets/img/icons/white_arrow.svg" width="24" height="24")
+	.section.footer
+		.cnt
+			h2 <span class="blue">Контакты</span><br> компании
+			<iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3Adac46a5866c40d9cfaa1316009e683912c5587d156d750f000543701d476a445" width="100%" height="350" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+			include ../../ui/footer

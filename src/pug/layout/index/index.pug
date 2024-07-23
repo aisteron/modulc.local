@@ -9,6 +9,9 @@ html(lang='ru')
 		meta(name="viewport" content="width=device-width, initial-scale=1")
 		script(src="/vendors/lazy/ls.bgset.min.js")
 		script(src="/vendors/lazy/lazysizes.min.js")
+		script(src="/vendors/fullpage/fullpage.min.js")
+		link(rel="stylesheet", href="/vendors/fullpage/fullpage.min.css")
+
 
 		link(rel="preload" as="font" type="font/woff2" href="/assets/fonts/Inter-Regular.woff2" crossorigin)
 		link(rel="preload" as="font" type="font/woff2" href="/assets/fonts/Inter-Medium.woff2" crossorigin)
@@ -17,7 +20,6 @@ html(lang='ru')
 
 	body(class=pageClass)
 		.wrapper
-			//include ./header
 			include ../../ui/header
 			include ./content
-			include ../../ui/footer
+			//include ../../ui/footer

@@ -42,7 +42,7 @@ export async function xml(action, data, path){
 		let xhr = new XMLHttpRequest();
 		let body = `action=${action}${data ? `&data=`+data : ""}`
 
-		//process.env.NODE_ENV == 'production' && (cfg.host = '')
+		process.env.NODE_ENV == 'production' && (cfg.host = '')
     
 
 
